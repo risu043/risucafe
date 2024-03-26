@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+
+/*
+COLORS
+================================================ */
+:root {
+  --main-color: #825b53;
+  --accent-color: #51985e;
+  --base-color: #f6eeeb;
+  --white: #fff;
+  --font-color: #3d3333;
+  --font-japanese: 'Noto Sans JP', sans-serif; /* 100 - 900 */
+  --font-title: 'Kaisei Opti', serif; /* 400 nomal */
+}
+
+/*
+    GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%;
+}
+body {
+  background-color: var(--base-color);
+  color: var(--font-color);
+  font-family: var(--font-japanese);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+/*
+    COMMON
+================================================ */
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+.sub-title {
+  font-family: var(--font-japanese);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.sub-title-center {
+  font-family: var(--font-japanese);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+/* layout */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 1rem 1rem;
+}
+
+/*
+    HEADER
+================================================ */
+header {
+  background-color: var(--white);
+  box-shadow: 1px 1px 5px var(--main-color);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  color: var(--font-color);
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav li {
+  list-style: none;
+}
+/*
+    MAIN
+================================================ */
+main {
+  padding: 1rem 0 2rem;
+  min-height: 85vh;
+}
+
+form {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.input-area {
+  margin-bottom: 0.5rem;
+}
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.125rem;
+}
+input[type='text'],
+input[type='password'],
+textarea {
+  border: 2px solid var(--base-color);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.button {
+  background-color: var(--main-color);
+  color: var(--white);
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--main-color);
+  border-radius: 50px;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  @media (600px < width) {
+    width: 160px;
+  }
+}
+.button:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+}
+.button-secondary {
+  background-color: var(--accent-color);
+  color: var(--white);
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 50px;
+  width: fit-content;
+  text-align: center;
+  transition: 0.4s;
+  margin-top: 1rem;
+}
+.button-secondary:hover {
+  background-color: var(--white);
+  color: var(--accent-color);
+}
+.button-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+/*
+    MAIN
+================================================ */
+.menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem 1.5rem;
+}
+.menu-wrapper img {
+  width: 100%;
+  height: auto;
+}
